@@ -9,7 +9,7 @@ public class Main {
 
         for (int i = 1; i <= 5000; i++) {
             n /= i;
-            if (n == 0) {
+            if (n == 0 || (n == 1 && n % i == 0)) {
                 System.out.print(i);
                 break;
             }
