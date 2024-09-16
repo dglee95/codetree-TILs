@@ -11,7 +11,7 @@ public class Main {
         for (int i = 1; i <= 10; i++) {
             prod *= i;
             if (prod >= n) {
-                Syste.out.print(i);
+                System.out.print(i);
             }
         }
     }
