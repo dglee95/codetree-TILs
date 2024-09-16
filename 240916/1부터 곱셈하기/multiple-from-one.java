@@ -12,6 +12,7 @@ public class Main {
             prod *= i;
             if (prod >= n) {
                 System.out.print(i);
+                break;
             }
         }
     }
