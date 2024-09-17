@@ -9,7 +9,7 @@ public class Main {
         int b = sc.nextInt();
 
         boolean check = false;
-        for (int = a; i <= b; i++) {
+        for (int i = a; i <= b; i++) {
             if (1920 % i == 0 && 2880 % i == 0) {
                 check = true;
                 break;
