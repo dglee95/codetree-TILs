@@ -16,7 +16,7 @@ public class Main {
                         System.out.print("  ");
                     }
                 } else {
-                    if (j >= i / 2 + 1) {
+                    if (j >= (i / 2) + (j / 2) + 1) {
                         System.out.print("* ");
                     } else {
                         System.out.print("  ");
