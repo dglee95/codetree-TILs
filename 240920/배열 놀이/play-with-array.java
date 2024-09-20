@@ -28,7 +28,7 @@ public class Main {
                         break;
                     }
                 }
-                if (idx > 0) {
+                if (idx > -1) {
                     System.out.println(idx + 1);
                 } else {
                     System.out.println(0);
