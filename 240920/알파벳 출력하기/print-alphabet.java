@@ -13,7 +13,7 @@ public class Main {
                 if (i >= j) {
                     System.out.printf("%c", c);
                     c++;
-                    if (c == 'Z') {
+                    if (c == 'Z' + 1) {
                         c = 'A';
                     }
                 }
