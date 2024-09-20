@@ -39,7 +39,7 @@ public class Main {
                 for (int j = s; j <= e; j++) {
                     System.out.printf("%d ", arr[j - 1]);
                 }
-                System.out,println();
+                System.out.println();
             }
         }
     }
