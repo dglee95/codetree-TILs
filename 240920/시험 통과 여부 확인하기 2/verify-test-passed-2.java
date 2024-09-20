@@ -8,12 +8,13 @@ public class Main {
         int n = sc.nextInt();
         int cnt = 0;
         for (int i = 0; i < n; i++) {
-            int a = sc.nextInt();
-            int b = sc.nextInt();
-            int c = sc.nextInt();
-            int d = sc.nextInt();
+            int sum = 0;
+            for (int j = 0; j < 4; j++) {
+                int score = sc.nextInt();
+                sum += score;
+            }
 
-            if ((a + b + c + d) / (double) 4 >= 60) {
+            if ((double) sum / 4 >= 60) {
                 System.out.println("pass");
                 cnt++;
             } else {
