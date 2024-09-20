@@ -18,27 +18,35 @@ public class Main {
             b[i] = sc.nextInt();
         }
 
-        int idx = -1;
-        for (int i = 0; i < n1 - n2; i++) {
+        int idx = 0;
+        int[] idxArr = new int[n1 - n2 + 1];
+        for (int i = 0; i < n1 - n2 + 1; i++) {
+            idxArr[idx] = -1;
             if (a[i] == b[0]) {
-                idx = i;
-                break;
+                idxArr[idx++] = i;
             }
         }
 
-        if (idx > -1) {
-            boolean check = true;
-            for (int i = 0; i < n2; i++) {
-                if (b[i] != a[idx++]) {
+        int cnt = 0;
+        for (int i = 0; i < n1 - n2 + 1; i++) {
+            int index = idxArr[i];
+            if (index > -1) {
+                boolean check = true;
+                for (int j = 0; j < n2; j++) {
+                if (b[j] != a[index++]) {
                     check = false;
                     break;
                 }
+                }
+                if (check) {
+                    cnt++;
+                }
             }
-            if (check)
-                System.out.print("Yes");
-            else
-                System.out.print("No");
+            
+        }
 
+        if (cnt > 0) {
+            System.out.print("Yes");
         } else {
             System.out.print("No");
         }
