@@ -19,37 +19,41 @@ public class Main {
         }
 
         int idx = 0;
-        int[] idxArr = new int[n1 - n2 + 1];
-        for (int i = 0; i < n1 - n2 + 1; i++) {
-            idxArr[idx] = -1;
-            if (a[i] == b[0]) {
-                idxArr[idx++] = i;
-            }
-        }
-
-        int cnt = 0;
-        for (int i = 0; i < n1 - n2 + 1; i++) {
-            int index = idxArr[i];
-            if (index > -1) {
-                boolean check = true;
-                for (int j = 0; j < n2; j++) {
-                if (b[j] != a[index++]) {
-                    check = false;
-                    break;
-                }
-                }
-                if (check) {
-                    cnt++;
+        if (n1 - n2 + 1> 0) {
+            int[] idxArr = new int[n1 - n2 + 1];
+            for (int i = 0; i < n1 - n2 + 1; i++) {
+                idxArr[idx] = -1;
+                if (a[i] == b[0]) {
+                    idxArr[idx++] = i;
                 }
             }
-            
-        }
 
-        if (cnt > 0) {
-            System.out.print("Yes");
+            int cnt = 0;
+            for (int i = 0; i < n1 - n2 + 1; i++) {
+                int index = idxArr[i];
+                if (index > -1) {
+                    boolean check = true;
+                    for (int j = 0; j < n2; j++) {
+                        if (b[j] != a[index++]) {
+                            check = false;
+                            break;
+                        }
+                    }
+                    if (check) {
+                        cnt++;
+                    }
+                }
+            }
+
+            if (cnt > 0) {
+                System.out.print("Yes");
+            } else {
+                System.out.print("No");
+            }
         } else {
             System.out.print("No");
         }
+       
 
 
 
