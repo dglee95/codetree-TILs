@@ -27,11 +27,6 @@ public class Main {
         for (int i = 0; i < n; i++) {
             boolean check = true;
 
-            if (i + 1 >= n) {
-                System.out.print(-1);
-                break;
-            }
-
             for (int j = i + 1; j < n; j++) {
                 if (maxVal == arr[j]) {
                     check = false;
@@ -43,7 +38,13 @@ public class Main {
                 System.out.print(maxVal);
                 break;
             } else {
-                maxVal = arr[i + 1];
+                if (i + 2 >= n) {
+                    System.out.print(-1);
+                    break;
+                } else {
+                    maxVal = arr[i + 2];
+                    i++;
+                }
             }
         }
     }
