@@ -23,6 +23,10 @@ public class Main {
             }
         }
 
+        for (int i : arr) {
+            System.out.printf("%d ", i);
+        }
+
         int maxVal = arr[0];
         for (int i = 0; i < n; i++) {
             boolean check = true;
