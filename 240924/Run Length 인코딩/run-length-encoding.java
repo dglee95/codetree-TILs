@@ -14,19 +14,23 @@ public class Main {
 
         int len = 0;
 
-        for (int i = 1; i < A.length(); i++) {
-            if (A.charAt(i - 1) == A.charAt(i)) {
-                cnt++;
-            } else {
-                builder.append(c);
-                builder.append(cnt);
-                cnt = 1;
-                c = A.charAt(i);
-            }
+        if (A.length() == 1) {
+            builder.append(c).append(cnt);
+        } else {
+            for (int i = 1; i < A.length(); i++) {
+                if (A.charAt(i - 1) == A.charAt(i)) {
+                    cnt++;
+                } else {
+                    builder.append(c);
+                    builder.append(cnt);
+                    cnt = 1;
+                    c = A.charAt(i);
+                }
 
-            if (i == A.length() - 1) {
-                builder.append(c);
-                builder.append(cnt);
+                if (i == A.length() - 1) {
+                    builder.append(c);
+                    builder.append(cnt);
+                }
             }
         }
         System.out.println(builder.length());
