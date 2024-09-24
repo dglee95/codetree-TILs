@@ -9,9 +9,9 @@ public class Main {
         String str2 = sc.next();
 
         if (str1.length() > str2.length()) {
-            System.out.print(str1);
+            System.out.print(str1 + " " + str1.length());
         } else if (str2.length() > str1.length()){
-            System.out.print(str2);
+            System.out.print(str2 + " " + str2.length());
         } else {
             System.out.print("same");
         }
